@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+
+@import './variables.scss';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: $color550;
+    font-family: 'Roboto', sans-serif;
+    font-size: $font1;
+    line-height: 1.5;
+
+    direction: ltr;
+    text-align: left;
+}
+
+@media print {
+    header, footer, aside, nav, form, iframe, .menu, .hero, .adslot {
+        display: none !important;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        color: black;
+        box-sizing: border-box !important;
+    }
+
+    div {
+        box-sizing: border-box !important;
+    }
+
+    html, body, .print-letter {
+        // background: white;
+
+        // width: 216mm !important;
+        // height: 279mm !important;
+
+        // width: 8.5in !important;
+        // height: 11in !important;
+
+        height: 100% !important;
+        width: 100% !important;
+
+        min-width: auto !important;
+        min-height: auto !important;
+    }
+}
