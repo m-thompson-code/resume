@@ -35,8 +35,10 @@
                     </div>
                     <div *ngFor="let section of ele.sections" class="section">
                         <div *ngIf="section.start || section.end" class="year">
-                            <div *ngIf="section.start">{{ section.start }} -</div>
-                            <div *ngIf="section.end">{{ section.end }}</div>
+                            <div class="years-section">
+                                <div *ngIf="section.start" class="year-section">{{ section.start }} -</div>
+                                <div *ngIf="section.end" class="year-section">{{ section.end }}</div>
+                            </div>
                         </div>
                         <div class="section-content">
                             <div class="title">

@@ -46,13 +46,13 @@ export class AppComponent implements OnInit {
                     ['Phone',
                     '714-204-2188'],
                     ['E-mail',
-                    'moomoomamoo@gmail.com'],
+                    'mark.thompson.code@gmail.com'],
                     ['WWW',
-                    'moomoomamoo.com'],
+                    'https://mark-thompson.web.app'],
                     ['GitHub',
-                    '@moomoomamoo'],
+                    '@mark-thompson-code'],
                     ['LinkedIn',
-                    '@moomoomamoo'],
+                    '@mark-thompson-code'],
                 ]
             },
             {
@@ -92,17 +92,14 @@ export class AppComponent implements OnInit {
                 header: 'Experience',
                 sections: [
                     {
-                        start: '2017-01',
+                        start: '2019-01',
                         end: 'Current', 
                         title: 'SMPL LLC',
-                        subTitle: 'Full stack developer - Smpl Talk project',
+                        subTitle: 'Full stack developer - Rocket Rounding project',
                         listItems: [
-                            `Mobile-friendly and print-friendly web app and native app`,
-                            `Scaled from handling 1 location to all 30 locations for Adventist Health`,
-                            `Created and documented API for integration their intranet`,
-                            `Worked with other teams to integrate SSO`,
-                            `Created various dashboards for analytics on user activity with exportable csvs`,
-                            'Responsible for handling DevOps and sprint planning',
+                            `Web and native application`,
+                            `Created public API and node module SDK`,
+                            'Responsible for handling DevOps, security, and sprint planning',
                         ],
                     },
                     {
@@ -116,17 +113,19 @@ export class AppComponent implements OnInit {
                         ],
                     },
                     {
-                        start: '2019-01',
+                        start: '2017-01',
                         end: 'Current', 
                         title: 'SMPL LLC',
-                        subTitle: 'Full stack developer - Rocket Rounding project',
+                        subTitle: 'Full stack developer - Smpl Talk project',
                         listItems: [
-                            `Web and native application`,
-                            `Created public API and node module SDK`,
-                            'Responsible for handling DevOps, security, and sprint planning',
+                            `Mobile-friendly and print-friendly web app and native app`,
+                            `Scaled from handling 1 location to all 30 locations for Adventist Health`,
+                            `Created and documented API for integration their intranet`,
+                            `Worked with other teams to integrate SSO`,
+                            `Created various dashboards for analytics on user activity with exportable csvs`,
+                            'Responsible for handling DevOps and sprint planning',
                         ],
                     },
-                    
                 ]
             },
             {

@@ -125,9 +125,22 @@
         padding-bottom: $padding;
     }
 
+    .section-content {
+        flex-grow: 1;
+    }
+
     .year {
-        padding-left: $padding;
         width: 73.5pt;
+
+        .years-section {
+            width: 73.5pt;
+            padding-left: $padding;
+            line-height: 1;
+            
+            .year-section {
+                padding-bottom: calc(#{$padding}/ 2);
+            }
+        }
     }
 
     .title {
@@ -172,7 +185,7 @@
     }
 }
 
-// // For testing padding, margins, line-height
-// * {
-//     border: 1px solid rgba(255, 0, 125, .5);
-// }
+// For testing padding, margins, line-height
+* {
+    border: 1px solid rgba(255, 0, 125, .5);
+}
