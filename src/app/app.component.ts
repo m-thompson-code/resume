@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
                     ['E-mail',
                     'm.thompson.code@gmail.com'],
                     ['WWW',
-                    'https://mark-thompson.web.app'],
+                    'mark-thompson.web.app'],
                     ['GitHub',
                     '@m-thompson-code'],
                     ['LinkedIn',

@@ -1,6 +1,6 @@
 # Mark Thompson Resume
 
-Angular 9 project used to host my resume. The resume is print friendly and will adjust to most print sizes (Intended for Letter size).
+Angular 9 project used to host my resume. The resume is print friendly and will adjust to most print sizes (Intended for Letter size with no margins).
 
 Expected to function on Chrome.
 
