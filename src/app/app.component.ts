@@ -46,13 +46,13 @@ export class AppComponent implements OnInit {
                     ['Phone',
                     '714-204-2188'],
                     ['E-mail',
-                    'mark.thompson.code@gmail.com'],
+                    'm.thompson.code@gmail.com'],
                     ['WWW',
                     'https://mark-thompson.web.app'],
                     ['GitHub',
-                    '@mark-thompson-code'],
+                    '@m-thompson-code'],
                     ['LinkedIn',
-                    '@mark-thompson-code'],
+                    '@m-thompson-code'],
                 ]
             },
             {
