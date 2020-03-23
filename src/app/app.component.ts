@@ -97,7 +97,7 @@ export class AppComponent implements OnInit {
                         start: '2019-01',
                         end: 'Current', 
                         title: 'SMPL LLC',
-                        subTitle: 'Full stack developer - Rocket Rounding project',
+                        subTitle: 'Full Stack Developer - Rocket Rounding project',
                         listItems: [
                             `Managed web / native application, public API, and node module SDK`,
                             'Worked with Product Owner to define project scope and objectives and coordinated sprints',
@@ -108,9 +108,9 @@ export class AppComponent implements OnInit {
                         start: '2018-06',
                         end: '2018-12', 
                         title: 'SMPL LLC',
-                        subTitle: 'Backend developer - Willoe project',
+                        subTitle: 'Back End Developer - Willoe project',
                         listItems: [
-                            `Collaberated with external teams to parse big data`,
+                            `Collaborated with external teams to parse big data`,
                             `Built dashboards to present analytics to Shareholders`,
                         ],
                     },
@@ -118,7 +118,7 @@ export class AppComponent implements OnInit {
                         start: '2017-01',
                         end: 'Current', 
                         title: 'SMPL LLC',
-                        subTitle: 'Full stack developer - Smpl Talk project',
+                        subTitle: 'Full Stack Developer - Smpl Talk project',
                         listItems: [
                             `Managed mobile-friendly and print-friendly applications`,
                             `Scaled web application from handling a single location of Adventist Health to all locations in California`,
