@@ -36,6 +36,8 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.desc = 'Innovative full stack developer skilled in leadership and project management, with a strong foundation in math, programming logic, cross-platform coding. Seeking to leverage solid development skills with a focus on collaboration and communication.'
+
         this.sidePanelElements = [
             {
                 header: 'Personal Info',
@@ -97,9 +99,9 @@ export class AppComponent implements OnInit {
                         title: 'SMPL LLC',
                         subTitle: 'Full stack developer - Rocket Rounding project',
                         listItems: [
-                            `Web and native application`,
-                            `Created public API and node module SDK`,
-                            'Responsible for handling DevOps, security, and sprint planning',
+                            `Managed web / native application, public API, and node module SDK`,
+                            'Worked with Product Owner to define project scope and objectives and coordinated sprints',
+                            'Responsible for maintaining staging and production environments for all applications'
                         ],
                     },
                     {
@@ -108,8 +110,8 @@ export class AppComponent implements OnInit {
                         title: 'SMPL LLC',
                         subTitle: 'Backend developer - Willoe project',
                         listItems: [
-                            `Collaberated with other developers to parse big data`,
-                            `Worked on dashboards and analytics`,
+                            `Collaberated with external teams to parse big data`,
+                            `Built dashboards to present analytics to Shareholders`,
                         ],
                     },
                     {
@@ -118,12 +120,10 @@ export class AppComponent implements OnInit {
                         title: 'SMPL LLC',
                         subTitle: 'Full stack developer - Smpl Talk project',
                         listItems: [
-                            `Mobile-friendly and print-friendly web app and native app`,
-                            `Scaled from handling 1 location to all 30 locations for Adventist Health`,
-                            `Created and documented API for integration their intranet`,
-                            `Worked with other teams to integrate SSO`,
-                            `Created various dashboards for analytics on user activity with exportable csvs`,
-                            'Responsible for handling DevOps and sprint planning',
+                            `Managed mobile-friendly and print-friendly applications`,
+                            `Scaled web application from handling a single location of Adventist Health to all locations in California`,
+                            `Developed and documented API for integration with enterprise intranet`,
+                            `Built dashboards for exportable analytics such as user activity`,
                         ],
                     },
                 ]
@@ -137,7 +137,7 @@ export class AppComponent implements OnInit {
                         title: 'Northern Arizona University, B.S. in Computer Science',
                         subTitle: 'Minor in Mathematics',
                         listItems: [
-                            `Capstone project - Scheduling app for the Center for International Educational for managing agendas and mailing lists`,
+                            `Capstone project - Application for managing agendas and mailing lists for the Center for International Educational`,
                             `Worked for the Department of Teaching and Learning as a tutor`,
                         ],
                     },
@@ -149,24 +149,18 @@ export class AppComponent implements OnInit {
                     {
                         title: 'Chess opening learning application',
                         listItems: [
-                            `Created a mobile-friendly application that is also available on the iOS and Android app store`,
+                            `Application that teaches users the 500 listed chess openings in the ECO and the 20,000 variations.`,
                         ],
                     },
                     {
-                        title: 'SamTron Twitch developer',
+                        title: 'Twitch interactive overlay and bot',
                         listItems: [
-                            `Created an overlay that interacts with the stream chat`,
-                            `Created a bot that responds to the users in the stream chat`,
+                            `Developed client-side interactive overlay that responds to Twitch users`,
+                            `Developed server-side bot interacts with Twitch chat`,
                         ],
                     },
                 ]
             },
         ];
-
-
-        this.desc = 'Innovative full stack developer skilled in leadership and project management, with a strong foundation in math, programming logic, cross-platform coding. Seeking to leverage solid development skills with a focus on collaboration and communication.'
     }
-
-
-
 }
