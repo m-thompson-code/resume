@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --progress",
+    "start:es5": "ng serve --open --progress --c=serve-es5",
     "build": "ng build --c=production --aot",
     "deploy": "npm run build && firebase use resume && firebase deploy && firebase use personal && firebase deploy",
     "test": "ng test",

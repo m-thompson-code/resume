@@ -33,6 +33,15 @@
             "scripts": []
           },
           "configurations": {
+            "serve-es5": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
+              "tsConfig": "./tsconfig-es5.app.json"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -69,6 +78,9 @@
             "browserTarget": "resume:build"
           },
           "configurations": {
+            "serve-es5": {
+              "browserTarget": "resume:build:serve-es5"
+            },
             "production": {
               "browserTarget": "resume:build:production"
             }

@@ -41,8 +41,6 @@
     background: $color100;
     color: $color850;
 
-    width: 33.333333%;
-
     .name {
         color: $color900;
         font-size: $font6;
@@ -99,6 +97,8 @@
 .main-panel {
     flex-grow: 2;
 
+    width: 100%;// IE Support
+
     .desc {
         padding: calc(#{$padding} * 3 / 4) $padding;
     }
@@ -127,11 +127,10 @@
 
     .section-content {
         flex-grow: 1;
+        width: 100%; // IE Support
     }
 
     .year {
-        width: 73.5pt;
-
         .years-section {
             width: 73.5pt;
             padding-left: $padding;
