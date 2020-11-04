@@ -1,21 +1,24 @@
 @import '../variables.scss';
 
+$printWidth: 8.5in;
+$printHeight: 11in;
+
 .container {
     display: flex;
 
     min-width: 100vw;
     min-height: 100vh;
 
-    width: calc(8.5in + 1in);
-    height: calc(11in + 1in);
+    width: $printWidth + 1in;
+    height: $printHeight + 1in;
 
     align-items: center;
     justify-content: center;
 }
 
 .outer {
-    width: 8.5in;
-    height: 11in;
+    width: $printWidth;
+    height: $printHeight;
 
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     border-radius: 2px;
@@ -100,7 +103,7 @@
     width: 100%;// IE Support
 
     .desc {
-        padding: calc(#{$padding} * 3 / 4) $padding;
+        padding: ($padding * 3 / 4) $padding;
     }
 
     .header {
@@ -118,7 +121,7 @@
     .section {
         display: flex;
         flex-direction: row;
-        padding-top: $padding;
+        padding-top: $padding * 1.5;
     }
     
     .section:last-child {
@@ -130,23 +133,21 @@
         width: 100%; // IE Support
     }
 
-    .year {
-        .years-section {
-            width: 73.5pt;
-            padding-left: $padding;
-            line-height: 1;
-            
-            .year-section {
-                padding-bottom: calc(#{$padding}/ 2);
-            }
-        }
-    }
-
     .title {
+        display: flex;
+        padding: 0 $padding ($padding/2);
         font-size: $font3;
         line-height: 1;
-        padding: 0 $padding $padding;
-        font-weight: 700;
+
+        .main {
+            font-size: $font3;
+            line-height: 1;
+            font-weight: 700;
+            
+            flex-grow: 2;
+
+            white-space: pre-line;
+        }
     }
 
     .sub-title {
@@ -173,6 +174,31 @@
     }
 }
 
+.icon {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 250px;
+    width: 250px;
+    // background: green;// To help with cropping transparency
+    
+    opacity: .15;
+
+    .m {
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        font-size: 154px;
+        transform: translate(-50%, -50%);
+        font-weight: 900;
+    }
+
+    pointer-events: none;
+}
+
 @media print {
     .outer, .inner {
         width: 100%;
@@ -182,9 +208,14 @@
         border-radius: 0;
         overflow: hidden;
     }
+
+    .icon {
+        display: none;
+    }
 }
 
 // // For testing padding, margins, line-height
 // * {
+//     box-sizing: border-box;
 //     border: 1px solid rgba(255, 0, 125, .5);
 // }

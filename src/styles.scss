@@ -3,10 +3,6 @@
 
 @import './variables.scss';
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 ul {
     padding: 0;
     margin: 0;
@@ -45,4 +41,9 @@ body {
         min-width: auto !important;
         min-height: auto !important;
     }
+}
+
+// source: https://developer.mozilla.org/en-US/docs/Web/CSS/@page
+@page {
+    margin: 0;
 }

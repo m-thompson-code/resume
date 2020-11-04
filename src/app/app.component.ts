@@ -24,69 +24,75 @@ export interface MainPanelElement {
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    title = 'resume';
+    public mainPanelElements: MainPanelElement[];
+    public sidePanelElements: SidePanelElement[];
 
-    mainPanelElements: MainPanelElement[];
-    sidePanelElements: SidePanelElement[];
-
-    desc: string;
+    public desc: string;
 
     constructor() {
 
     }
 
-    ngOnInit() {
-        this.desc = 'Innovative full stack developer skilled in leadership and project management, with a strong foundation in math, programming logic, cross-platform coding. Seeking to leverage solid development skills with a focus on collaboration and communication.'
+    public ngOnInit(): void {
+        // this.desc = 'Innovative full stack developer skilled in leadership and project management, with a strong foundation in math, programming logic, cross-platform coding. Seeking to leverage solid development skills with a focus on collaboration and communication.'
+        this.desc = 'Innovative full stack developer with a foundation in mathematics, programming logic, and cross-platform coding. Strong background in developing and maintaining web applications using Angular.';
 
         this.sidePanelElements = [
             {
                 header: 'Personal Info',
                 itemGroups: [
-                    ['Address',
-                    '205 S. Coronado St. Apt 105, ',
-                    'Los Angeles, CA 90057'],
-                    ['Phone',
-                    '714-204-2188'],
-                    ['E-mail',
-                    'm.thompson.code@gmail.com'],
+                    ['Contact', 'm.thompson.code@gmail.com', '714-204-2188'],
+                    ['Location', 'Downtown Los Angeles, CA'],
                     ['WWW',
                     'mark-thompson.web.app'],
                     ['GitHub',
                     '@m-thompson-code'],
                     ['LinkedIn',
                     '@m-thompson-code'],
-                ]
+                ],
             },
             {
-                header: 'Front End',
+                header: 'Soft Skills',
                 itemGroups: [
-                    ['Ionic 5, Angular 9, HTML 5, SCSS, CSS3, TypeScript, ES8'],
-                ]
+                    ['Adaptability, Self-management, Strong Work Ethic, Quick Learner'],
+                ],
             },
             {
-                header: 'Back End',
+                header: 'Languages',
                 itemGroups: [
-                    ['Express.js, NPM, Node.js, Python, AWS'],
-                ]
+                    ['Typescript, Javascript, ES2020, HTML5, CSS3, Python, Ruby, C, C++'],
+                ],
             },
             {
-                header: 'Testing',
+                header: 'Frameworks and Libraries',
                 itemGroups: [
-                    ['Jasmine, Karma'],
-                ]
+                    ['Angular 10, Ionic 5, SendGrid, Django, Ruby on Rails'],
+                ],
             },
             {
-                header: 'Databases',
+                header: 'Database Management',
                 itemGroups: [
-                    ['MongoDB, MySql, NoSQL, SQL'],
-                ]
+                    ['Firebase Realtime and Firestore, MongoDB, MySql'],
+                ],
+            },
+            {
+                header: 'Cloud-Based Technologies',
+                itemGroups: [
+                    ['Google/Firebase Cloud Functions, AWS, Heroku'],
+                ],
+            },
+            {
+                header: 'Tools',
+                itemGroups: [
+                    ['Figma, ProtoPie, Adobe XD'],
+                ],
             },
             {
                 header: 'SDLC',
                 itemGroups: [
-                    ['Agile, Confluence, Jira'],
-                ]
-            }
+                    ['Agile, Confluence, Jira, npm, Git'],
+                ],
+            },
         ];
 
         this.mainPanelElements = [
@@ -94,73 +100,97 @@ export class AppComponent implements OnInit {
                 header: 'Experience',
                 sections: [
                     {
-                        start: '2019-01',
+                        start: 'Aug 2019',
+                        end: 'Sep 2019', 
+                        title: 'Master of Shapes, Visible',
+                        subTitle: 'Full Stack Developer - Red Rocks Unpaused project',
+                        listItems: [
+                            `Angular 10, Firebase`,
+                            `Interactive web experience that allowed for real time user interaction for the Visible X Red Rocks concert`,
+                        ],
+                    },
+                    {
+                        start: 'Mar 2019',
+                        end: 'Jun 2019', 
+                        title: 'Master of Shapes, SAP',
+                        subTitle: 'Full Stack Developer - Commit Water project',
+                        listItems: [
+                            `Angular 9, Firebase, Node JS, MongoDB`,
+                            `Interactive intelligent enterprise showcase during the Sapphire NOW Reimagined event for SAP`,
+                        ],
+                    },
+                    {
+                        start: 'Jan 2019',
                         end: 'Current', 
                         title: 'SMPL LLC',
                         subTitle: 'Full Stack Developer - Rocket Rounding project',
                         listItems: [
-                            `Managed web / native application, public API, and node module SDK`,
-                            'Worked with Product Owner to define project scope and objectives and coordinated sprints',
-                            'Responsible for maintaining staging and production environments for all applications'
+                            `Angular 7 - 10, Ionic 3 - 5, Firebase, Node JS`,
+                            `Applications for digital patient rounding, public API, and Node SDK`,
+                            'Coordinated sprints and worked with product owner to define project scope and objectives',
                         ],
                     },
                     {
-                        start: '2018-06',
-                        end: '2018-12', 
+                        start: 'Jun 2018',
+                        end: 'Dec 2018', 
                         title: 'SMPL LLC',
                         subTitle: 'Back End Developer - Willoe project',
                         listItems: [
-                            `Collaborated with external teams to parse big data`,
-                            `Built dashboards to present analytics to Shareholders`,
+                            `Angular 8, Mongo DB, AWS`,
+                            `Application MVP for monitoring analytics for hospitals and staff hygiene`,
                         ],
                     },
                     {
-                        start: '2017-01',
-                        end: 'Current', 
+                        start: 'Jan 2017',
+                        end: 'Sep 2020', 
                         title: 'SMPL LLC',
                         subTitle: 'Full Stack Developer - Smpl Talk project',
                         listItems: [
-                            `Managed mobile-friendly and print-friendly applications`,
-                            `Scaled web application from handling a single location of Adventist Health to all locations in California`,
-                            `Developed and documented API for integration with enterprise intranet`,
-                            `Built dashboards for exportable analytics such as user activity`,
+                            `Angular 2 - 8, Ionic 3 - 5, Firebase, Node JS`,
+                            `Applications for making communication simpler for hospitals and staff, public API, automated emailing services, easy to print newsletters for all of Adventist Health's locations in California`,
                         ],
                     },
-                ]
+                ],
             },
             {
                 header: 'Education',
                 sections: [
                     {
-                        start: '2011-08',
-                        end: '2015-05', 
-                        title: 'Northern Arizona University, B.S. in Computer Science',
+                        start: 'Aug 2011',
+                        end: 'May 2015', 
+                        title: 'Northern Arizona University, \nB.S. in Computer Science',
                         subTitle: 'Minor in Mathematics',
                         listItems: [
-                            `Capstone project - Application for managing agendas and mailing lists for the Center for International Educational`,
+                            `Capstone project - Application for managing agendas and mailing lists for the Center for International Educational using Ruby on Rails and MySQL`,
                             `Worked for the Department of Teaching and Learning as a tutor`,
                         ],
                     },
-                ]
+                ],
             },
-            {
-                header: 'Projects',
-                sections: [
-                    {
-                        title: 'Chess opening learning application',
-                        listItems: [
-                            `Application that teaches users the 500 listed chess openings in the ECO and the 20,000 variations.`,
-                        ],
-                    },
-                    {
-                        title: 'Twitch interactive overlay and bot',
-                        listItems: [
-                            `Developed client-side interactive overlay that responds to Twitch users`,
-                            `Developed server-side bot interacts with Twitch chat`,
-                        ],
-                    },
-                ]
-            },
+            // {
+            //     header: 'Projects',
+            //     sections: [
+            //         {
+            //             title: 'Chess opening learning application',
+            //             listItems: [
+            //                 `Application that teaches users the 500 listed chess openings in the ECO and the 20,000 variations.`,
+            //             ],
+            //         },
+            //         {
+            //             title: 'Chess opening learning application',
+            //             listItems: [
+            //                 `Application that teaches users the 500 listed chess openings in the ECO and the 20,000 variations.`,
+            //             ],
+            //         },
+            //         {
+            //             title: 'Twitch interactive overlay and bot',
+            //             listItems: [
+            //                 `Developed client-side interactive overlay that responds to Twitch users`,
+            //                 `Developed server-side bot interacts with Twitch chat`,
+            //             ],
+            //         },
+            //     ],
+            // },
         ];
     }
 }
