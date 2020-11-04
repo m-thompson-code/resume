@@ -29,11 +29,17 @@ export class AppComponent implements OnInit {
 
     public desc: string;
 
+    public showWarning: boolean = false;
+
     constructor() {
 
     }
 
     public ngOnInit(): void {
+        if (!this.isChrome()) {
+            this.showWarning = true;
+        }
+
         // this.desc = 'Innovative full stack developer skilled in leadership and project management, with a strong foundation in math, programming logic, cross-platform coding. Seeking to leverage solid development skills with a focus on collaboration and communication.'
         this.desc = 'Innovative full stack developer with a foundation in mathematics, programming logic, and cross-platform coding. Strong background in developing and maintaining web applications using Angular.';
 
@@ -100,8 +106,8 @@ export class AppComponent implements OnInit {
                 header: 'Experience',
                 sections: [
                     {
-                        start: 'Aug 2019',
-                        end: 'Sep 2019', 
+                        start: 'Aug 2020',
+                        end: 'Sep 2020', 
                         title: 'Master of Shapes, Visible',
                         subTitle: 'Full Stack Developer - Red Rocks Unpaused project',
                         listItems: [
@@ -110,8 +116,8 @@ export class AppComponent implements OnInit {
                         ],
                     },
                     {
-                        start: 'Mar 2019',
-                        end: 'Jun 2019', 
+                        start: 'Mar 2020',
+                        end: 'Jun 2020', 
                         title: 'Master of Shapes, SAP',
                         subTitle: 'Full Stack Developer - Commit Water project',
                         listItems: [
@@ -192,5 +198,26 @@ export class AppComponent implements OnInit {
             //     ],
             // },
         ];
+    }
+
+    public isChrome(): boolean {
+        try {
+            // const isChrome = navigator.userAgent.indexOf("Chrome") !== -1;
+
+            // source: https://stackoverflow.com/a/9851769/9115419
+            const isChrome = !!(window as any).chrome?.webstore || !!(window as any).chrome?.runtime;
+
+            // Edge (based on chromium) detection
+            const isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") !== -1);
+
+            if (isEdgeChromium) {
+                return false;
+            }
+
+            return isChrome;
+        }catch(error) {
+            console.warn(error);
+            return false;
+        }
     }
 }

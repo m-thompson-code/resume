@@ -87,3 +87,7 @@
         </div>
     </div>
 </div>
+
+<div *ngIf="showWarning" class="warning" (click)="showWarning = false">
+    Print support has only been implemented for Chrome and the latest version of Edge. I would highly recommend printing using Chrome.
+</div>
