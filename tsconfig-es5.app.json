@@ -1,7 +1,0 @@
-{
-  "extends": "./tsconfig.app.json",
-  "compilerOptions": {
-    // source: https://angular.io/guide/deployment#differential-loading
-    "target": "es5", // Required for IE 11 to work for development server
-  },
-}

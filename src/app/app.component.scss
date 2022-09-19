@@ -13,7 +13,7 @@ $containerMargin: 2.5in;
     width: $printWidth + $containerMargin;
     height: $printHeight + $containerMargin;
 
-    padding-bottom: $containerMargin*1.5;
+    padding-bottom: $containerMargin * 1.5;
 
     align-items: center;
     justify-content: center;
@@ -23,7 +23,7 @@ $containerMargin: 2.5in;
     width: $printWidth;
     height: $printHeight;
 
-    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
     overflow: hidden;
 }
 
@@ -48,7 +48,7 @@ $containerMargin: 2.5in;
 
     .name {
         color: $color900;
-        font-size: $font6;
+        font-size: $font4;
         line-height: 1;
         font-weight: 400;
 
@@ -66,10 +66,10 @@ $containerMargin: 2.5in;
     }
 
     .title {
-        font-size: $font5;
+        font-size: $font2;
         line-height: 1;
         padding: $padding;
-        font-weight: 600;
+        font-weight: 400;
 
         display: flex;
         flex-direction: column;
@@ -84,7 +84,7 @@ $containerMargin: 2.5in;
 
     .header {
         background: $color0;
-        font-size: $font4;
+        font-size: $font2;
         line-height: 1;
         padding: calc(#{$padding} / 2) $padding;
         font-weight: 700;
@@ -112,7 +112,7 @@ $containerMargin: 2.5in;
         border-top: 1px solid $color750;
         border-bottom: 1px solid $color750;
 
-        font-size: $font4;
+        font-size: $font3;
         line-height: 1;
 
         padding: calc(#{$padding} / 2) 0;
@@ -138,11 +138,11 @@ $containerMargin: 2.5in;
     .title {
         display: flex;
         padding: 0 $padding ($padding/2);
-        font-size: $font3;
+        font-size: $font2;
         line-height: 1;
 
         .main {
-            font-size: $font3;
+            font-size: $font2;
             line-height: 1;
             font-weight: 700;
             
@@ -153,7 +153,7 @@ $containerMargin: 2.5in;
     }
 
     .sub-title {
-        font-size: $font2;
+        font-size: $font1;
         font-style: italic;
         line-height: 1;
         padding: 0 $padding $padding;
@@ -184,9 +184,8 @@ $containerMargin: 2.5in;
 
     height: 250px;
     width: 250px;
-    // background: green;// To help with cropping transparency
     
-    opacity: .15;
+    opacity: .2;
 
     .m {
         color: white;
@@ -222,6 +221,26 @@ $containerMargin: 2.5in;
     cursor: pointer;
 }
 
+img {
+    border-radius: 8px;
+    position: fixed;
+    display: block;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    transition: all 100ms;
+    margin: 25px;
+}
+
+@media only screen and (max-width: ($printWidth + 250px * 2)) {
+    img {
+      height: ($containerMargin) * .5 - 8px * 2;
+      width: ($containerMargin) * .5 - 8px * 2;
+      border-radius: 8px;
+      margin: 8px;
+    }
+}
+
 @media print {
     .container {
         padding: 0;
@@ -236,12 +255,18 @@ $containerMargin: 2.5in;
         overflow: hidden;
     }
 
-    .icon {
+    .icon, .warning, img, .message-to-developers {
         display: none;
     }
-    .warning {
-        display: none;
-    }
+}
+
+.message-to-developers {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: $font4;
+    color: transparent;
+    z-index: -1;
 }
 
 // // For testing padding, margins, line-height

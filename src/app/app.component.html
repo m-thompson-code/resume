@@ -1,7 +1,18 @@
+<div class="message-to-developers">
+    <p>Outside of programming, I'm really into chess and playing roguelites. I speed ran Rogue Legacy 2 and my PB is ~1hr 50 minutes. At the time, that would have put me at 4th or 5th in the world.</p>
+    <p>I've also into fighting games and have competed in Smash bros tournaments during college. I ranked top 10 in Arizona for Brawl and placed top 16 in a SoCal national</p>
+    <p>Currently I'm playing Skullgirls and Guilty Gear Strive</p>
+    <p>When I first went to college, I wanted to be a math teacher. I'm still very much into mathematics, but I have a much stronger passion for development</p>
+    <p>In highschool I made Kirby fan games using game maker</p>
+    <p>My favorite animal are cows</p>
+    <p>This is where my nickname "moo" comes from :)</p>
+</div>
+
+
+<img src="assets/Mark_Thompson_headshot_800.png" alt="Mark Thompson headshot">
+
 <div class="icon">
-    <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) -->
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve" width="250" height="250">
-        <!-- <style type="text/css"> .st0{fill:#DD0031;} .st1{fill:#C3002F;} .st2{fill:#FFFFFF;} -->
         <style type="text/css"> .st0{fill:#35373a;} .st1{fill:#1F2124;} .st2{fill:#FFFFFF;}
     </style>
     <g> <polygon class="st0" points="125,30 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,230 203.9,186.3 218.1,63.2 "></polygon> <polygon class="st1" points="125,30 125,52.2 125,52.1 125,153.4 125,153.4 125,230 125,230 203.9,186.3 218.1,63.2 125,30 "></polygon> </g>
@@ -18,7 +29,7 @@
                 </div>
 
                 <div class="title section">
-                    <span>Full Stack Developer</span>
+                    <span>Angular Consultant and Contractor</span>
                 </div>
 
                 <div *ngFor="let ele of sidePanelElements">
@@ -37,7 +48,7 @@
 
             <div class="main-panel">
                 <div class="desc">
-                    {{ desc }}
+                    I've been writing Angular code since Angular 2 released and have been keeping up with every major release since. Experienced in full stack development as a contractor.
                 </div>
 
                 <div *ngFor="let ele of mainPanelElements">
@@ -46,13 +57,6 @@
                     </div>
                     
                     <div *ngFor="let section of ele.sections" class="section">
-                        <!-- <div *ngIf="section.start || section.end" class="year">
-                            <div class="years-section">
-                                <div *ngIf="section.start" class="year-section">{{ section.start }} -</div>
-                                <div *ngIf="section.end" class="year-section">{{ section.end }}</div>
-                            </div>
-                        </div> -->
-
                         <div class="section-content">
                             <div class="title">
                                 <span class="main">
@@ -88,6 +92,6 @@
     </div>
 </div>
 
-<div *ngIf="showWarning" class="warning" (click)="showWarning = false">
-    Print support has only been implemented for Chrome and the latest version of Edge. I would highly recommend printing using Chrome.
+<div *ngIf="showPrintWarning" class="warning" (click)="showPrintWarning = false">
+    Print support has been implemented for Chrome
 </div>

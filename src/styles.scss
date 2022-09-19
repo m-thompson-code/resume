@@ -9,10 +9,14 @@ ul {
 }
 
 body {
+    // source: https://stackoverflow.com/questions/3893986/css-media-print-issues-with-background-color
+    // Keeps background colors on print
+    -webkit-print-color-adjust: exact !important;
     background: $color550;
     font-family: 'Roboto', sans-serif;
     font-size: $font1;
     line-height: 1.5;
+    font-weight: 400;
 
     direction: ltr;
     text-align: left;
