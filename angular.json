@@ -38,15 +38,6 @@
             "namedChunks": true
           },
           "configurations": {
-            "serve-es5": {
-              "budgets": [
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb"
-                }
-              ],
-              "tsConfig": "./tsconfig-es5.app.json"
-            },
             "production": {
               "fileReplacements": [
                 {
@@ -83,9 +74,6 @@
             "browserTarget": "resume:build"
           },
           "configurations": {
-            "serve-es5": {
-              "browserTarget": "resume:build:serve-es5"
-            },
             "production": {
               "browserTarget": "resume:build:production"
             }
@@ -117,7 +105,6 @@
       }
     }
   },
-  "defaultProject": "resume",
   "cli": {
     "analytics": "34d9be85-8357-458b-99f1-4d9b3d0da116"
   }
