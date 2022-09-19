@@ -58,7 +58,7 @@ $containerMargin: 2.5in;
         flex-direction: column;
 
         span {
-            padding-bottom: calc(#{$padding} / 2);
+            padding-bottom: calc(#{$padding} * .5);
         }
         span:last-child {
             padding-bottom: 0;
@@ -75,7 +75,7 @@ $containerMargin: 2.5in;
         flex-direction: column;
         
         span {
-            padding-bottom: calc(#{$padding} / 2);
+            padding-bottom: calc(#{$padding} * .5);
         }
         span:last-child {
             padding-bottom: 0;
@@ -86,16 +86,16 @@ $containerMargin: 2.5in;
         background: $color0;
         font-size: $font2;
         line-height: 1;
-        padding: calc(#{$padding} / 2) $padding;
+        padding: calc(#{$padding} * .5) $padding;
         font-weight: 700;
     }
 
     .item-group {
-        padding: calc(#{$padding} * 3 / 4) $padding 0;
+        padding: calc(#{$padding} * .75) $padding 0;
     }
 
     .item-group:last-child {
-        padding: calc(#{$padding} * 3 / 4) $padding calc(#{$padding} * 3 / 4);
+        padding: calc(#{$padding} * .75) $padding calc(#{$padding} * .75);
     }
 }
 
@@ -105,7 +105,7 @@ $containerMargin: 2.5in;
     width: 100%;// IE Support
 
     .desc {
-        padding: ($padding * 3 / 4) $padding;
+        padding: ($padding * .75) $padding;
     }
 
     .header {
@@ -115,7 +115,7 @@ $containerMargin: 2.5in;
         font-size: $font3;
         line-height: 1;
 
-        padding: calc(#{$padding} / 2) 0;
+        padding: calc(#{$padding} * .5) 0;
         margin: 0 $padding;
         font-weight: 700;
     }
@@ -137,7 +137,7 @@ $containerMargin: 2.5in;
 
     .title {
         display: flex;
-        padding: 0 $padding ($padding/2);
+        padding: 0 $padding ($padding * .5);
         font-size: $font2;
         line-height: 1;
 
